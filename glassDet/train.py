@@ -46,7 +46,7 @@ def parse_args():
                         help='Learning rate')
     parser.add_argument('--weight-decay', type=float, default=5e-4,
                         help='Weight decay')
-    parser.add_argument('--num-workers', type=int, default=4,
+    parser.add_argument('--num-workers', type=int, default=2,
                         help='Number of data loading workers')
     
     # Loss weights

@@ -9,11 +9,11 @@ class Config:
     pretrained = True
     
     # Training
-    batch_size = 8  # Adjust based on GPU memory
+    batch_size = 10  
     num_epochs = 200
     learning_rate = 1e-4
     weight_decay = 5e-4
-    num_workers = 4
+    num_workers = 2
     
     # Loss weights
     bce_weight = 1.0
@@ -22,7 +22,7 @@ class Config:
     
     # Checkpoints
     checkpoint_dir = './checkpoints'
-    save_interval = 10
+    save_interval = 25
     
     # GPU
-    gpu_ids = '0'  # Use '0,1' for multiple GPUs
+    gpu_ids = '0' 

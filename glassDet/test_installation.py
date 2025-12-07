@@ -22,11 +22,11 @@ def test_installation():
         x = torch.randn(2, 3, 224, 224)
         if torch.cuda.is_available():
             x = x.cuda()
-            print("✓ CUDA tensor operations working")
-        print("✓ Basic tensor operations working")
+            print(" CUDA tensor operations working")
+        print(" Basic tensor operations working")
         return True
     except Exception as e:
-        print(f"✗ Error: {e}")
+        print(f" Error: {e}")
         return False
 
 if __name__ == "__main__":
