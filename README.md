@@ -37,7 +37,7 @@ Glass surfaces are a fundamental failure mode for robotic perception systems:
 
 - **LiDAR** transmits through glass, producing no return — glass walls appear as free space
 - **RGB-D cameras** (structured light / ToF) receive corrupted or absent depth at transparent surfaces
-- **Standard SLAM** (ORB-SLAM3, gmapping) has no semantic understanding of transparency — it treats missing depth as navigable space
+- **Standard SLAM** (ORB-SLAM3, gmapping) has no semantic understanding of transparency — it treats missing depth as movable space
 
 The result: robots collide with glass walls, and occupancy maps have holes where solid obstacles exist. This project adds a learned glass detection front-end (GDNet) to the SLAM pipeline, projecting glass masks into the occupancy map as solid obstacles — without modifying the SLAM backend.
 
@@ -48,7 +48,7 @@ The result: robots collide with glass walls, and occupancy maps have holes where
 ```
 ┌────────────────────────────────────────────────────────────────┐
 │                        Input Stream                            │
-│              (RGB frames @ 30Hz — camera / ROS bag)            │
+│              (RGB frames @ 30Hz - camera / ROS bag)            │
 └───────────────────────────┬────────────────────────────────────┘
                             │
               ┌─────────────▼──────────────┐
@@ -92,8 +92,8 @@ The result: robots collide with glass walls, and occupancy maps have holes where
         │
 ┌───────▼────────┐
 │  SLAM Backend  │
-│ (ORB-SLAM3 /  │
-│  gmapping)    │
+│ (ORB-SLAM3 /   │
+│  gmapping)     │
 │ Localization + │
 │ Mapping        │
 └────────────────┘
