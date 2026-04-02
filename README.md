@@ -4,6 +4,14 @@
 
 ---
 
+## Demo
+
+![Glass Detection SLAM — live inference demo](assets/demo.gif)
+
+> GDNet running at 30+ FPS with temporal filtering. Glass surfaces (highlighted overlay) are detected in real time and injected into the SLAM occupancy map as solid obstacles.
+
+---
+
 ## Table of Contents
 
 - [Motivation](#motivation)
